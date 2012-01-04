@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.3'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -8,18 +8,33 @@ gem 'rails', '3.1.3'
 gem 'sqlite3'
 # Added by Jeffrey:
 group :development do
-  gem 'rspec-rails', '2.6.1'
+  gem 'rspec-rails'
 end
 
 group :test do
-  gem 'rspec-rails', '2.6.1'
+  gem 'rspec-rails'
   gem 'webrat', '0.7.1'
 end
 
 # Added by Jeffrey to fix Heroku push
-gem 'rails', '3.1.3'
+gem 'rails'
 
 gem 'sqlite3', :group => :development
+
+#Added by Jeffrey to test Spork Test Server with Autotest
+source 'http://rubygems.org'
+
+gem 'rails'
+gem 'sqlite3'
+
+group :development do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'spork'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
